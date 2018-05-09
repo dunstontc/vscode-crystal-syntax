@@ -1,0 +1,38 @@
+{
+  "repository": {
+    "regex_sub": {
+			"patterns": [
+				{"include": "#interpolated_crystal"},
+				{"include": "#escaped_char"},
+				{
+					"captures": {
+						"1": {"name": "punctuation.definition.arbitrary-repitition.crystal"},
+						"3": {"name": "punctuation.definition.arbitrary-repitition.crystal"}
+					},
+					"match": "(\\{)\\d+(,\\d+)?(\\})",
+					"name": "string.regexp.arbitrary-repitition.crystal"
+				},
+				{
+					"begin": "\\[(?:\\^?\\])?",
+					"captures": [{"name": "punctuation.definition.character-class.crystal"}],
+					"end": "\\]",
+					"name": "string.regexp.character-class.crystal",
+					"patterns": [{"include": "#escaped_char"}]
+				},
+				{
+					"begin": "\\(",
+					"captures": [{"name": "punctuation.definition.group.crystal"}],
+					"end": "\\)",
+					"name": "string.regexp.group.crystal",
+					"patterns": [{"include": "#regex_sub"}]
+				},
+				{
+					"comment": "We are restrictive in what we allow to go after the comment character to avoid false positives, since the availability of comments depend on regexp flags.",
+					"captures": {"1": {"name": "punctuation.definition.comment.crystal"}},
+					"match": "(?<=^|\\s)(#)\\s[[a-zA-Z0-9,. \\t?!-][^\\x{00}-\\x{7F}]]*$",
+					"name": "comment.line.number-sign.crystal",
+				}
+			]
+		}
+  }
+}
