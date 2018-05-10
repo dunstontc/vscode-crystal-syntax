@@ -1,8 +1,8 @@
 {
     "name": "vscode-crystal-syntax",
     "displayName": "vscode-crystal-syntax",
-    "description": "Syntax highlighting for crystal.",
-    "version": "0.0.1",
+    "description": "Syntax highlighting for crystal. (WIP)",
+    "version": "0.0.2",
     "publisher": "dunstontc",
     "repository": {
         "type": "git",
@@ -18,7 +18,6 @@
                 "id": "crystal",
                 "aliases": ["crystal"],
                 "extensions": [".cr"],
-                "filenames": [],
                 "firstLine": "^#!/.*\\bcrystal",
                 "configuration": "./language-configuration.json"
             }

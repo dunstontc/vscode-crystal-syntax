@@ -100,7 +100,7 @@
 		},
 		{
 			"comment": " everything being a method but having a special function is a..",
-			"match": "\\b(initialize|new|loop|include|extend|raise|getter|setter|property|class_getter|class_setter|class_property|describe|it|with|delegate|def_hash|def_equals|def_equals_and_hash|forward_missing_to|record|assert_responds_to|spawn)\\b[!?]?",
+			"match": "\\b(puts|initialize|new|loop|include|extend|raise|getter|setter|property|class_getter|class_setter|class_property|describe|it|with|delegate|def_hash|def_equals|def_equals_and_hash|forward_missing_to|record|assert_responds_to|spawn)\\b[!?]?",
 			"name": "keyword.control.special-method.crystal"
 		},
 		{

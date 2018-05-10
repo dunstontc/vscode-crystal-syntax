@@ -98,7 +98,8 @@
                 }
             },
             "match": "^\\s*(lib)\\s+(([A-Z]\\w*(::))?([A-Z]\\w*(::))?([A-Z]\\w*(::))*[A-Z]\\w*)",
-            "name": "meta.lib.crystal"
+            "name": "meta.lib.crystal",
+            "include": "#variable"
         },
         {
             "comment": "else if is a common mistake carried over from other languages. it works if you put in a second end, but it’s never what you want.",
@@ -150,7 +151,7 @@
         },
         {
             "comment": " everything being a method but having a special function is a..",
-            "match": "\\b(initialize|new|loop|include|extend|raise|getter|setter|property|class_getter|class_setter|class_property|describe|it|with|delegate|def_hash|def_equals|def_equals_and_hash|forward_missing_to|record|assert_responds_to|spawn)\\b[!?]?",
+            "match": "\\b(puts|initialize|new|loop|include|extend|raise|getter|setter|property|class_getter|class_setter|class_property|describe|it|with|delegate|def_hash|def_equals|def_equals_and_hash|forward_missing_to|record|assert_responds_to|spawn)\\b[!?]?",
             "name": "keyword.control.special-method.crystal"
         },
         {
@@ -1886,7 +1887,17 @@
             "patterns": []
         },
         "variable": {
-            "patterns": []
+            "patterns": [
+                {
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.variable.crystal"
+                        }
+                    },
+                    "match": "(\\%)[a-zA-Z_]\\w*[\\s|\\.\\]",
+                    "name": "variable.other.readwrite.fresh.crystal"
+                }
+            ]
         }
     },
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"

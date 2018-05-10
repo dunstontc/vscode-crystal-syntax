@@ -15,7 +15,7 @@
     // { "include": "#string" },
     // { "include": "#support" },
     // { "include": "#type" },
-    // { "include": "#variable" },
+    { "include": "#variable" },
   ],
   // "repository":{},
 }

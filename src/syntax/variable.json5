@@ -1,7 +1,14 @@
 {
   "repository": {
     "variable": {
-      "patterns": []
+      "patterns": [
+        {
+          // https://github.com/crystal-lang-tools/vscode-crystal-lang/pull/53
+          "captures": {"1": {"name": "punctuation.definition.variable.crystal"}},
+          "match": "(\\%)[a-zA-Z_]\\w*[\\s|\\.\\]",
+          "name": "variable.other.readwrite.fresh.crystal"
+        },
+      ]
     }
   }
 }
