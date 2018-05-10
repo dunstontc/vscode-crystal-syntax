@@ -1,4 +1,4 @@
 Configure comments
 Add punctuation
-Replace "EXTENSION"
-Replace "LANGUAGE"
+2018-05-09 "variable.language.self.crystal".
+2018-05-09 Add "::" Operator.

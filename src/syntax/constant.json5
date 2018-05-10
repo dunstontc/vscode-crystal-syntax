@@ -1,7 +1,12 @@
 {
   "repository": {
     "constant": {
-      "patterns": []
+      "patterns": [
+        {
+          "match": "\\b(nil|true|false)\\b(?![?!])",
+          "name": "constant.language.crystal"
+        },
+      ]
     }
   }
 }

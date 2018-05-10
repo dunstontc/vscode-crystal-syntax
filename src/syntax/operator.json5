@@ -1,7 +1,40 @@
 {
   "repository": {
     "operator": {
-      "patterns": []
+      "patterns": [
+        {
+          "match": "=>",
+          "name": "punctuation.separator.key-value"
+        },
+        {
+          "match": "<<=|%=|&=|\\*=|\\*\\*=|\\+=|\\-=|\\^=|\\|{1,2}=|<<",
+          "name": "keyword.operator.assignment.augmented.crystal"
+        },
+        {
+          "match": "<=>|<(?!<|=)|>(?!<|=|>)|<=|>=|===|==|=~|!=|!~|(?<=[ \\t])\\?",
+          "name": "keyword.operator.comparison.crystal"
+        },
+        {
+          "match": "(?<=[ \\t])!+|\\bnot\\b|&&|\\band\\b|\\|\\||\\bor\\b|\\^",
+          "name": "keyword.operator.logical.crystal"
+        },
+        {
+          "match": "(\\{\\%|\\%\\}|\\{\\{|\\}\\})",
+          "name": "keyword.operator.macro.crystal"
+        },
+        {
+          "match": "(%|&|\\*\\*|\\*|\\+|\\-|\/)",
+          "name": "keyword.operator.arithmetic.crystal"
+        },
+        {
+          "match": "=",
+          "name": "keyword.operator.assignment.crystal"
+        },
+        {
+          "match": "\\||~|>>",
+          "name": "keyword.operator.other.crystal"
+        },
+      ]
     }
   }
 }

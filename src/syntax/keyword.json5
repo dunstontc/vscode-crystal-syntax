@@ -1,7 +1,51 @@
 {
   "repository": {
     "keyword": {
-      "patterns": []
+      "patterns": [
+        {
+          "match": "(\\.)?(new)(\\()",
+          "captures": {
+            "1": {"name": "punctuation.separator.method.crystal"},
+            "2": {"name": "keyword.control.special-method.crystal"},
+            "3": {"name": "punctuation.section.function.crystal"},
+          }
+        },
+        {
+          "comment": "else if is a common mistake carried over from other languages. it works if you put in a second end, but it\u2019s never what you want.",
+          "match": "(?<!\\.)\\belse(\\s)+if\\b",
+          "name": "invalid.deprecated.crystal"
+        },
+        {
+          "comment": "everything being a reserved word, not a value and needing a 'end' is a..",
+          "match": "(?<!\\.)\\b(alias|as|begin|case|abstract|class|ensure|for|fun|if|in|lib|module|of|out|previous_def|private|protected|rescue|struct|with|union|enum|macro|then|type|unless|until|while|select)\\b(?![?!])",
+          "name": "keyword.control.primary.crystal"
+        },
+        {
+          "comment": "everything being a reserved word, not a value and needing a 'end' is a..",
+          "match": "(?<!\\.)\\b(when|else|elsif)\\b(?![?!])",
+          "name": "keyword.control.secondary.crystal"
+        },
+        {
+          "comment": "Give the end keyword an additional scope",
+          "match": "(?<!\\.)\\b(end)\\b(?![?!])",
+          "name": "keyword.control.secondary.end.crystal"
+        },
+        {
+          "comment": "contextual smart pair support for block parameters",
+          "match": "(?<!\\.)\\bdo\\b\\s*",
+          "name": "keyword.control.start-block.crystal"
+        },
+        {
+          "comment": " as above, just doesn't need a 'end' and does a logic operation",
+          "match": "(?<!\\.)\\b(and|not|or)\\b",
+          "name": "keyword.operator.logical.crystal"
+        },
+        {
+          "comment": " just as above but being not a logical operation",
+          "match": "(?<!\\.)\\b(asm|alias|alias_method|break|next|pointerof|typeof|sizeof|instance_sizeof|return|super|yield|uninitialized)\\b(?![?!])",
+          "name": "keyword.control.pseudo-method.crystal"
+        },
+      ]
     }
   }
 }

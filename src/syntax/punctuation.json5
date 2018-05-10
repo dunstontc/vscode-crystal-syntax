@@ -1,7 +1,48 @@
 {
   "repository": {
     "punctuation": {
-      "patterns": []
+      "patterns": [
+        {
+          "name": "punctuation.other.paren.crystal",
+          "match": "[()]",
+        },
+        {
+					"match": ",",
+					"name": "punctuation.separator.variable.crystal"
+				},
+        {
+          "match": "=>",
+          "name": "punctuation.separator.key-value"
+        },
+        {
+          "match": ":",
+          "name": "punctuation.separator.other.crystal"
+        },
+        {
+          "match": "\\;",
+          "name": "punctuation.separator.statement.crystal"
+        },
+        {
+          "match": ",",
+          "name": "punctuation.separator.object.crystal"
+        },
+        {
+          "match": "\\.|::",
+          "name": "punctuation.separator.method.crystal"
+        },
+        {
+          "match": "\\{|\\}",
+          "name": "punctuation.section.scope.crystal"
+        },
+        {
+          "match": "\\[|\\]",
+          "name": "punctuation.section.array.crystal"
+        },
+        {
+          "match": "\\(|\\)",
+          "name": "punctuation.section.function.crystal"
+        }
+      ]
     }
   }
 }

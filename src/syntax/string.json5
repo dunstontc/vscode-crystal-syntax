@@ -2,16 +2,16 @@
   "repository": {
     "string": {
       "patterns": [
-        {
-          "name": "string.quoted.single.crystal",
-          "begin": "'",
-          "end": "'",
-        },
-        {
-          "name": "string.quoted.double.crystal",
-          "begin": "\"",
-          "end": "\"",
-        },
+        // {
+        //   "name": "string.quoted.single.crystal",
+        //   "begin": "'",
+        //   "end": "'",
+        // },
+        // {
+        //   "name": "string.quoted.double.crystal",
+        //   "begin": "\"",
+        //   "end": "\"",
+        // },
       ]
     }
   }
