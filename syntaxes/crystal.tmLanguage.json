@@ -98,8 +98,7 @@
                 }
             },
             "match": "^\\s*(lib)\\s+(([A-Z]\\w*(::))?([A-Z]\\w*(::))?([A-Z]\\w*(::))*[A-Z]\\w*)",
-            "name": "meta.lib.crystal",
-            "include": "#variable"
+            "name": "meta.lib.crystal"
         },
         {
             "comment": "else if is a common mistake carried over from other languages. it works if you put in a second end, but it’s never what you want.",
